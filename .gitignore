@@ -1,0 +1,14 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Models
+.models/
+models/
+
+# Dataset
+data/train_ready/
+data/

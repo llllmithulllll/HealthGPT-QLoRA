@@ -1,0 +1,1 @@
+pip install transformers datasets peft trl accelerate bitsandbytes sentencepiece evaluate scipy
