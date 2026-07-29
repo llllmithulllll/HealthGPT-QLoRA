@@ -1,1 +1,1 @@
-pip install transformers datasets peft trl accelerate bitsandbytes sentencepiece evaluate scipy
+pip install transformers datasets peft trl accelerate bitsandbytes sentencepiece evaluate scipy flash-attn
