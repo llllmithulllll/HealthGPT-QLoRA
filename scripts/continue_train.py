@@ -17,7 +17,7 @@ dataset = load_from_disk("data/train_ready")
 dataset = dataset.shuffle(seed=42)
 
 # Second chunk (change this for future chunks)
-dataset = dataset.select(range(35000, 50000))
+dataset = dataset.select(range(50000,85000))
 
 split = dataset.train_test_split(
     test_size=0.1,
