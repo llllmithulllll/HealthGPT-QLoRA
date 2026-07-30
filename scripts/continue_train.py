@@ -8,6 +8,7 @@ from transformers import TrainingArguments, Trainer
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 
+
 # ======================================================
 # Load Dataset
 # ======================================================
@@ -48,7 +49,7 @@ bnb_config = BitsAndBytesConfig(
 model = AutoModelForCausalLM.from_pretrained(
     ".models/base/llama-3.2-3B-Instruct",
     quantization_config=bnb_config,
-    device_map="auto"
+    device_map="auto",
 )
 
 model.gradient_checkpointing_enable()
@@ -83,6 +84,8 @@ training_args = TrainingArguments(
     gradient_accumulation_steps=8,
 
     learning_rate=1e-4,
+    lr_scheduler_type="cosine",
+    warmup_steps=120,
 
     bf16=True,
 
@@ -93,14 +96,14 @@ training_args = TrainingArguments(
     logging_steps=20,
 
     eval_strategy="steps",
-    eval_steps=500,
+    eval_steps=1000,
 
     save_strategy="steps",
-    save_steps=500,
+    save_steps=1000,
 
     save_total_limit=2,
 
-    report_to="none"
+    report_to="none",
 )
 
 # ======================================================
