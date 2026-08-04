@@ -2,18 +2,10 @@
 HealthGPT Evaluation
 ==================================================
 
-Base Model
-Accuracy : 0.8060
-Precision: 0.9613
-Recall   : 0.8060
-F1 Score : 0.8767
-Avg Time : 26.46 sec
+Accuracy : 0.9260
+Precision: 0.9695
+Recall   : 0.9260
+F1 Score : 0.9468
+Avg Time : 31.82 sec
 
-Fine-tuned Model
-Accuracy : 0.9340
-Precision: 0.9806
-Recall   : 0.9340
-F1 Score : 0.9567
-Avg Time : 43.67 sec
-
-Accuracy Improvement : 12.80%
+Accuracy Improvement : 12.00%
